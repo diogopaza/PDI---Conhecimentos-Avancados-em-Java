@@ -14,12 +14,12 @@ public class ImprimiNumeros implements Runnable{
         int cont = 1;             
         if (this.nomeThread != null){
             while (cont <= 1000) {
-                System.out.println("Estou na thread: " + nomeThread + " - " + cont);
+                System.out.println("Estou na thread diferente NULL: " + nomeThread + " - " + cont);
                 cont++;
             }
         }else{
             while (cont <= 1000) {
-                System.out.println("Estou na thread: " + threadID.currentThread().getId() + " - " + cont);
+                System.out.println("Estou na thread igual NULL: " + threadID.currentThread().getId() + " - " + cont);
                 cont++;
             }
         }   
