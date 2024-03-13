@@ -10,4 +10,10 @@
   <li>Economia</li>
 </ul>
 
+<h3>Uso de Threads com Java</h3>
+<ul>
+  <li>Threads Java são gerenciadas pela JVM</li>
+  <li></li>
+</ul>
+
 <p>Quando várias threads são executadas não é possível ter controle sobre a ordem de execução dos processos em paralelo como pode ser visto na implementação do programa TarefaBuscaTextual.</p> 
