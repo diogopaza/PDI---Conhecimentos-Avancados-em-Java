@@ -26,4 +26,6 @@
 <ul>
     <li>start()</li>
     <li>sleep()</li>
+    <li>setDaemon(true) == esse método faz a máquina virtual do Java terminar a execução quando não existirem mais Threads aguardando para serem notificadas. Uma Thread daemon só roda quando mais Threads principais estão em execução.</li>
+    <li>setPriority(10) == é possível dar prioridade a uma Thread, porém não é possível afirmar com certeza se essa Thread será executada por primeiro. O nível de prioridade varia entre 1 e10, sendo 10 a prioridade mais alta.</li>
 </ul>

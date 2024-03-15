@@ -4,6 +4,7 @@ public class App {
         Thread convidado1 = new Thread(new Tarefa1(banheiro), "Joao");
         Thread convidado2 = new Thread(new Tarefa2(banheiro), "Pedro");
         Thread zelador = new Thread(new TarefaLimpeza(banheiro), "Zelador");
+        zelador.setDaemon(true);
         //Thread convidado3 = new Thread(new Tarefa1(banheiro), "Ana");
         //Thread convidado4 = new Thread(new Tarefa2(banheiro), "Maria");
 

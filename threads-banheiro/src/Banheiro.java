@@ -29,8 +29,8 @@ public class Banheiro {
         // lock.lock();
         String nome = Thread.currentThread().getName();
         System.out.println(nome + " batendo na porta");
-
         synchronized (this) {
+            System.out.println(nome + " entrando no banheiro");
             if(ehSujo){
                 esperaLaFora(nome);
             }            
@@ -39,16 +39,19 @@ public class Banheiro {
             System.out.println(nome + " dando descarga");
             System.out.println(nome + " lavando as maos");
             System.out.println(nome + " saindo do banheiro");
+            ehSujo = true;
+            System.out.println("Banheiro esta sujo - " + ehSujo);
         }
         // lock.unlock();
 
     }
 
     public void fazNumero2() throws InterruptedException {
-        lock.lock();
+        //lock.lock();
         String nome = Thread.currentThread().getName();
         System.out.println(nome + " batendo na porta");
         synchronized (this) {
+            System.out.println(nome + " entrando no banheiro");
             if(ehSujo){
                 esperaLaFora(nome);
             }   
@@ -57,8 +60,10 @@ public class Banheiro {
             System.out.println(nome + " dando descarga");
             System.out.println(nome + " lavando as maos");
             System.out.println(nome + " saindo do banheiro");
+            ehSujo = true;
+            System.out.println("Banheiro esta sujo - " + ehSujo);
         }
-        lock.unlock();
+        //lock.unlock();
     }
 
     private void esperaLaFora(String nome) throws InterruptedException {
