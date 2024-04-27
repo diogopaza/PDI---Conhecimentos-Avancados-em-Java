@@ -1,8 +1,8 @@
 
 public class TarefaAdicionarElemento implements Runnable {
 
-    private Lista lista;
-    private int numeroThread;
+    public Lista lista;
+    public int numeroThread;
 
     public TarefaAdicionarElemento(Lista listaParametro, int numeroThread) {
         this.lista = listaParametro;
@@ -11,10 +11,10 @@ public class TarefaAdicionarElemento implements Runnable {
 
     @Override
     public void run() {
-        synchronized (this) {
+       // synchronized (this) {
             for (int i = 0; i < 10; i++) {
                 lista.adicionaElementos("Thread " + numeroThread + " - " + i);
             }
-        }
+       // }
     }
 }

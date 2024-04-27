@@ -7,9 +7,10 @@ public class Lista {
     private Lock lock = new ReentrantLock();
 
     public void adicionaElementos(String elemento) {       
-      
+      synchronized(this){
         this.elementos[indice] = elemento;
-        this.indice++;      
+        this.indice++;  
+      }            
     }
 
     public int tamanho() {
