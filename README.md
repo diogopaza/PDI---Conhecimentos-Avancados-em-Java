@@ -85,6 +85,44 @@ eureka.client.serviceUrl.defaultZone=http://localhost:8081/eureka
 
 -------------------------------------------------------------------
 
+O proximo passo é o microsservico de pagamento se registrar no Service-Discovery:
+
+pom.xml:
+
+<spring-cloud.version>2022.0.1</spring-cloud.version>
+
+<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+ ------------------------------------------
+ spring.cloud.config.enabled=false
+eureka.client.register-with-eureka=true 
+eureka.client.fetch-registry=true
+eureka.client.serviceUrl.defaultZone=http://localhost:8081/eureka
+
+#O proprio Eureka defini em qual porta o microssrvico ira subir
+server.port=0 
+
+--------------------------
+
+
 
 
 
