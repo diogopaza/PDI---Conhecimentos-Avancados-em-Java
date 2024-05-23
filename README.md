@@ -49,3 +49,43 @@ Dica:
 
 Use um array para representar o buffer compartilhado.
 Utilize o método synchronized para garantir o acesso exclusivo ao buffer compartilhado.
+
+
+<hr>
+
+<h2>Service Discovery e registry</h2>
+Decompor aplicacoes traz beneficios, mas tambem traz dificuldades. 
+Service Discover é um serviço de descoberta. 
+Para isso sera criado um microsservico chamado de Service-Discovery.
+No pom.xml 
+<spring-cloud.version>2023.0.1</spring-cloud.version>
+
+<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+</dependency>
+
+<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+ No application.properties
+ eureka.client.register-with-eureka=false 
+eureka.client.fetch-registry=false
+#endereco para se autenticar no servidor eureka
+eureka.client.serviceUrl.defaultZone=http://localhost:8081/eureka
+
+-------------------------------------------------------------------
+
+
+
+
+
