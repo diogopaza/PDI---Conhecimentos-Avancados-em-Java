@@ -125,6 +125,9 @@ eureka.client.serviceUrl.defaultZone=http://localhost:8081/eureka
 server.port=0
 
 -------------------------------------------
+Microsservico Pedidos - mesmas configuracoes do microsservico de pagamentos.
+
+--------------------------------------
 
 
  
