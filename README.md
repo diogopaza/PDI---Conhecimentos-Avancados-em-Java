@@ -128,6 +128,9 @@ server.port=0
 Microsservico Pedidos - mesmas configuracoes do microsservico de pagamentos.
 
 --------------------------------------
+Pelo dashboard é possivel ver que toda vez que sobe uma instancia o microsservico e criado em uma porta diferente.
+Para resolver isso sera usado o API GATEWAY
+
 
 
  
